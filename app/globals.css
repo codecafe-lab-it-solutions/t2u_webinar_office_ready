@@ -1,0 +1,94 @@
+@import "tailwindcss";
+
+:root {
+  --color-cream: #f3ecdd;
+  --color-cream-light: #f8f3e8;
+  --color-ink: #141414;
+  --color-ink-soft: #1e1e1e;
+  --color-yellow: #f5b93f;
+  --color-yellow-dark: #e5a62b;
+  --color-purple: #9b8af2;
+  --color-coral: #e9604c;
+  --color-muted: #6b6b6b;
+  --color-muted-light: #b8b8b8;
+}
+
+@theme inline {
+  --color-cream: var(--color-cream);
+  --color-cream-light: var(--color-cream-light);
+  --color-ink: var(--color-ink);
+  --color-ink-soft: var(--color-ink-soft);
+  --color-yellow: var(--color-yellow);
+  --color-yellow-dark: var(--color-yellow-dark);
+  --color-purple: var(--color-purple);
+  --color-coral: var(--color-coral);
+  --color-muted: var(--color-muted);
+  --color-muted-light: var(--color-muted-light);
+  --font-display: var(--font-poppins);
+  --font-sans: var(--font-inter);
+}
+
+body {
+  background: var(--color-cream);
+  color: var(--color-ink);
+  font-family: var(--font-sans), Arial, Helvetica, sans-serif;
+}
+
+.font-display {
+  font-family: var(--font-display), "Poppins", Arial, sans-serif;
+}
+
+.font-hi {
+  font-family: var(--font-devanagari), "Noto Sans Devanagari", Arial, sans-serif;
+}
+
+@layer utilities {
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+}
+
+@keyframes fade-in-up {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in-up {
+  opacity: 0;
+  animation: fade-in-up 0.7s ease-out forwards;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-fade-in-up {
+    opacity: 1;
+    animation: none;
+  }
+}
+
+@keyframes accordion-down {
+  from {
+    height: 0;
+  }
+  to {
+    height: var(--radix-accordion-content-height);
+  }
+}
+
+@keyframes accordion-up {
+  from {
+    height: var(--radix-accordion-content-height);
+  }
+  to {
+    height: 0;
+  }
+}
