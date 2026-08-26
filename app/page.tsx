@@ -9,6 +9,7 @@ import TrainerIntro from "@/components/TrainerIntro";
 import Testimonials from "@/components/Testimonials";
 import Bonuses from "@/components/Bonuses";
 import CTASection from "@/components/CTASection";
+import WhatsAppCommunity from "@/components/WhatsAppCommunity";
 import FAQ from "@/components/FAQ";
 import FinalCTA from "@/components/FinalCTA";
 
@@ -26,6 +27,7 @@ export default function Home() {
       <Testimonials />
       <Bonuses />
       <CTASection />
+      <WhatsAppCommunity />
       <FAQ />
       <FinalCTA />
     </main>

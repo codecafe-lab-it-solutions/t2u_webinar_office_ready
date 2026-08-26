@@ -13,7 +13,7 @@ export const WEBINAR = {
   endISO: null as string | null,
   supportEmail: "[support@t2upgrade.com]",
   supportPhone: "[+91 00000 00000]",
-  whatsappCommunityUrl: null as string | null,
+  whatsappCommunityUrl: "https://chat.whatsapp.com/HUwL4GnIpyZ7WkP0KCcDxo" as string | null,
 };
 
 export const MAX_SEATS = 100;
