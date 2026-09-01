@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { WEBINAR } from "@/lib/webinar-config";
 
 const FOOTER_LINKS = [
@@ -28,9 +29,13 @@ export default function Footer() {
       <div className="mx-auto max-w-7xl px-6 py-16 md:px-10 lg:px-20">
         <div className="grid gap-10 lg:grid-cols-[1.4fr_1fr_1fr_1fr]">
           <div>
-            <p className="font-display text-2xl font-extrabold tracking-tight">
-              T2<span className="text-yellow">Upgrade</span>
-            </p>
+            <Image
+              src="/logo.png"
+              alt="T2Upgrade"
+              width={731}
+              height={341}
+              className="h-12 w-auto"
+            />
             <p className="mt-4 max-w-sm text-sm leading-relaxed text-muted">
               Do Not Just Get a Job. Be Ready to Perform When You Get One.
               Practical office-ready skills for freshers and early-career

@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Image from "next/image";
 import Link from "next/link";
 import Button from "./Button";
 
@@ -16,9 +17,15 @@ export default function Navbar() {
   return (
     <header className="sticky top-0 z-50 bg-cream">
       <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-5 md:px-10 lg:px-20">
-        <Link href="/" className="font-display text-2xl font-extrabold tracking-tight">
-          T2
-          <span className="text-yellow">Upgrade</span>
+        <Link href="/" className="shrink-0">
+          <Image
+            src="/logo.png"
+            alt="T2Upgrade"
+            width={731}
+            height={341}
+            className="h-11 w-auto"
+            priority
+          />
         </Link>
 
         <nav className="hidden items-center gap-8 md:flex">
